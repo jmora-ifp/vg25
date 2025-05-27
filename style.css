@@ -1,0 +1,158 @@
+* {
+    margin:0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+article.accordion
+{
+	display: block;
+	width: 100vw;
+    height: 100vh;
+	margin: 0 auto;
+	background-color: #666;
+	overflow: hidden;
+	border-radius: 5px;
+	box-shadow: 0 3px 3px rgba(0,0,0,0.3);
+}
+article.accordion section
+{
+	position: relative;
+	display: block;
+	float: left;
+	width: 4vw;
+	height: 97vh;
+	margin: 0.5vw 0 0.5vw 0.5vw;
+	color: purple;
+	background-color: purple;
+	overflow: hidden;
+	border-radius: 5px;
+}
+article.accordion section>div>a
+{
+	color: purple;
+	background-color: purple;
+}
+article.accordion section h2
+{
+	position: absolute;
+	font-size: 2em;
+    font-weight: 900;
+	width: 30em;
+	height: 2em;
+	top: 20em;
+	left: 0;
+	text-indent: 1em;
+	padding: 0;
+	margin: 0;
+	color: #ddd;
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	-ms-transform-origin: 0 0;
+	-o-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+article.accordion section h2 a
+{
+	display: block;
+	width: 100%;
+	line-height: 2em;
+	text-decoration: none;
+	color: inherit;
+	outline: 0 none;
+}
+article.accordion section:target
+{
+	width: 88vw;
+	padding: 0 1vw;
+	color: purple;
+	background-color: #fff;
+}
+
+article.accordion #acc1:target
+{
+	background-color: violet;
+}
+
+article.accordion #acc2:target
+{
+	background-color: violet;
+}
+
+article.accordion #acc3:target
+{
+	background-color: violet;
+}
+
+article.accordion section:target h2
+{
+	position: static;
+	font-size: 2.3em;
+	text-indent: 0;
+	color: purple;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+}
+article.accordion section,
+article.accordion section h2
+{
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+article.accordion section:target>div
+{
+	position: static;
+    text-align: center;
+}
+
+article.accordion section:target>div>h3
+{
+    position: relative;
+    top:4vw;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+article.accordion section:target>div>a
+{
+	position: static;
+    display: inline-block;
+    text-decoration: none;
+    width: 25vw;
+    height: 25vw;
+    margin: 5vw;
+	font-size: 1.5em;
+    text-align: center;
+    vertical-align: bottom;
+    line-height: 25vw;
+    border-radius: 2vw;
+    font-weight: 600;
+	text-indent: 0;
+    background-color:purple;
+	color: #fff;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+}
