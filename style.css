@@ -3,6 +3,12 @@
     padding: 0;
 }
 
+:root {
+	--fort: rgba(196,32,41,1);
+	--feble: rgba(196,32,41,0.3);
+	--blanc: rgba(255,255, 255, 1);
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -18,7 +24,7 @@ article.accordion
 	width: 100vw;
     height: 100vh;
 	margin: 0 auto;
-	background-color: #666;
+	background-color: var(--blanc);
 	overflow: hidden;
 	border-radius: 5px;
 	box-shadow: 0 3px 3px rgba(0,0,0,0.3);
@@ -31,15 +37,15 @@ article.accordion section
 	width: 4vw;
 	height: 97vh;
 	margin: 0.5vw 0 0.5vw 0.5vw;
-	color: purple;
-	background-color: purple;
+	color: var(--fort);
+	background-color: var(--fort);
 	overflow: hidden;
 	border-radius: 5px;
 }
 article.accordion section>div>a
 {
-	color: purple;
-	background-color: purple;
+	color: var(--fort);
+	background-color: var(--fort);
 }
 article.accordion section h2
 {
@@ -53,7 +59,7 @@ article.accordion section h2
 	text-indent: 1em;
 	padding: 0;
 	margin: 0;
-	color: #ddd;
+	color: var(--blanc);
 	-webkit-transform-origin: 0 0;
 	-moz-transform-origin: 0 0;
 	-ms-transform-origin: 0 0;
@@ -78,23 +84,27 @@ article.accordion section:target
 {
 	width: 88vw;
 	padding: 0 1vw;
-	color: purple;
-	background-color: #fff;
+	color: var(--fort);
+	background-color: var(--blanc);
+	background-size: 40px 70px;
+	background-image:
+	  linear-gradient(to right, var(--blanc) 1px, transparent 1px),
+	  linear-gradient(to bottom, var(--blanc) 1px, transparent 1px);
 }
 
 article.accordion #acc1:target
 {
-	background-color: violet;
+	background-color: var(--feble);
 }
 
 article.accordion #acc2:target
 {
-	background-color: violet;
+	background-color: var(--feble);
 }
 
 article.accordion #acc3:target
 {
-	background-color: violet;
+	background-color: var(--feble);
 }
 
 article.accordion section:target h2
@@ -102,7 +112,7 @@ article.accordion section:target h2
 	position: static;
 	font-size: 2.3em;
 	text-indent: 0;
-	color: purple;
+	color: var(--fort);
 	-webkit-transform: rotate(0deg);
 	-moz-transform: rotate(0deg);
 	-ms-transform: rotate(0deg);
@@ -148,8 +158,8 @@ article.accordion section:target>div>a
     border-radius: 2vw;
     font-weight: 600;
 	text-indent: 0;
-    background-color:purple;
-	color: #fff;
+    background-color:;
+	color: var(--blanc);
 	-webkit-transform: rotate(0deg);
 	-moz-transform: rotate(0deg);
 	-ms-transform: rotate(0deg);
